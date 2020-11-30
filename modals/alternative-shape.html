@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piano widgets: modals</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body class="inner">
+<header class="header">
+  <nav class="nav">
+    <a class="nav__logo" href="https://piano.io" target="_blank">
+      <span class="visually-hidden">Go to the Piano website</span>
+      <img src="../../img/logo.svg" width="59" height="21" alt="Piano">
+    </a>
+    <ul class="nav__list list">
+      <li class="nav__item">
+        <a class="nav__link" href="/">Home</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="../all-demos.html">Demos</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="../all-guides.html">Guides</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="https://docs.piano.io" target="_blank">Docs website</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main class="content container">
+  <section class="content__section section">
+    <h1 class="content__headline">Modals: alternative shape</h1>
+    <p class="content__text">A template is rectangular by default&nbsp;&mdash; as any other element on the web. But there could be cases when you need another shape&nbsp;&mdash; like a circle or a polygon. Or you might want to simply have rounded corners, a very common case. With our templates you should know a couple of nuances, easy ones but still, we thought it would be a good thing to keep them written in the guidelines.</p>
+    <p class="content__text">On a demo page you may take a look at our example of an unusually shaped template.</p>
+    <p class="content__action">
+      <a class="content__button button unbutton" href="alternative-shape-demo.html">Demo</a>
+      <span class="content__footnote">To return from the demo page, please use the browser Back button. We were trying to make the demo as close to real life as possible, and did not provide any link to go back intentionally.</span>
+    </p>
+    <h2 class="content__small-headline">How-to</h2>
+    <nav class="content__menu">
+      <a class="content__item link" href="#reshape-a-modal">Reshape a modal</a>
+      <a class="content__item link" href="#set-up-a-modal">Set up a modal</a>
+      <a class="content__item link" href="#specify-sizes">Specify sizes</a>
+      <a class="content__item link" href="#customize-a-close-button">Customize a close button</a>
+      <a class="content__item link" href="#change-backdrop-color">Change backdrop color</a>
+      <a class="content__item link" href="#change-position">Change modal position</a>
+    </nav>
+    <h3 class="content__small-headline content__small-headline--secondary" id="reshape-a-modal">Reshaping a modal</h3>
+    <p class="content__text">To give a modal a new shape (other than a rectangle or a square) you need to do 3 things:</p>
+    <ol class="content__list list">
+      <li class="content__list-item">make the template itself have a shape you want, for example, set the outer container's <code class="content__code">border-radius</code> to <code class="content__code">10px</code> (guides of how to create different shapes on CSS you can find <a class="content__link link" href="https://css-tricks.com/the-shapes-of-css/" target="_blank">here</a>),</li>
+      <li class="content__list-item">turn the background on all ancestor off&nbsp;&mdash; meaning, change it to transparent from default white, so that the shape you created gets visible (add this code to the template CSS tab: <br><code class="content__code">body { background-color: rgba(255, 255, 255, 0); }</code></li>
+      <li class="content__list-item">remove default shadow on a Piano iframe wrapperby putting this code sample to CSS on your end: <br><code class="content__code">.tp-iframe-wrapper.tp-active { box-shadow: none; }</code></li>
+    </ol>
+    <h3 class="content__small-headline content__small-headline--secondary" id="set-up-a-modal">Setting up a modal</h3>
+    <p class="content__text">There're 2 ways to set up a modal: <a class="content__link link" href="https://docs.piano.io/javascript-offer/" target="_blank">on your end</a> or <a class="content__link link" href="https://docs.piano.io/actions/#templatetab" target="_blank">in Composer</a>. More information on this you will find in our documentation, in the links just mentioned. Please pay attention to a modal type of templates.</p>
+    <h3 class="content__small-headline content__small-headline--secondary" id="specify-sizes">Specifying a modal size</h3>
+    <p class="content__text">
+      Modal width is being set in a special tag <code class="content__code">&lt;config&gt;</code> which should be added to the very top of a template code. Specifically, you'd want to add a line like this <br>
+      <code class="content__code">&lt;config width="600"&gt;&lt;/config&gt;</code><br>
+      where "600" is a modal width, measured in pixels. You can set any amount here. Please keep in mind that for more narrow screens than the specified width (here in example for screens which are 600px wide and less) the template will take 100% of the screen. So, for example, on a regular smartphone with a screen width 375px the template width would also be 375px.
+    </p>
+    <h3 class="content__small-headline content__small-headline--secondary" id="customize-a-close-button">Customizing a close button</h3>
+    <p class="content__text">There're 2 options of close buttons in modals: Piano default close button and a custom one. Default close button is overflowing modal borders, and basically is located on your end. All customization should also take place on your end, <a class="content__link link" href="https://docs.piano.io/faq-article/how-can-i-style-the-offer-modal-and-background/" target="_blank">here is more info</a> on how to do this.</p>
+    <p class="content__text">Custom close button might be added right to a template code. It can also be a minimalist&nbsp;X or a colorful button saying something like "Go on reading". For it to be able to close modal, add this attribute to the element code: <code class="content__code">ng-click="close()"</code>.</p>
+    <h3 class="content__small-headline content__small-headline--secondary" id="change-backdrop-color">Changing backdrop color</h3>
+    <p class="content__text">Backdrop is located on your end, therefore all changes in CSS should be done in your CSS files as well. <a class="content__link link" href="https://docs.piano.io/faq-article/how-can-i-style-the-offer-modal-and-background/" target="_blank">Here is the documentation</a> on how to change the backdrop color.</p>
+    <h3 class="content__small-headline content__small-headline--secondary" id="change-position">About modal's position on a page</h3>
+    <p class="content__text">A modal is centered horizontally on a page (or takes 100% of its width, on narrow screens). Vertically, it's located 50px below the page top. This is resulted from years of QA. Our CSS should be universal and work on 100% websites, browsers, and devices. We strongly recommend not to break into it. What can be updated in a modal position is its top margin. Horizontal position and the code responsible for it should not be updated.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <img class="footer__logo" src="../../img/logo--white.svg" width="82" height="29" alt="Piano">
+  <p class="footer__copyright">
+    <small>&copy;</small>
+    <span id="footer-year">2020</span>
+    Piano Software Inc.
+  </p>
+</footer>
+
+<script>(function(src){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=src;var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})("https://sandbox.tinypass.com/xbuilder/experience/load?aid=mHtB14Aosu");</script>
+
+<script>
+    document.querySelector("#footer-year").innerText = new Date().getFullYear();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piano widgets: all guides</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="inner">
+  <header class="header">
+    <nav class="nav">
+      <a class="nav__logo" href="https://piano.io" target="_blank" title="Piano website">
+        <span class="visually-hidden">Go to the Piano website</span>
+        <img src="img/logo.svg" width="59" height="21" alt="Piano">
+      </a>
+      <ul class="nav__list list">
+        <li class="nav__item">
+          <a class="nav__link" href="/">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="all-demos.html">Demos</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link nav__link--current" href="#">Guides</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="https://docs.piano.io" target="_blank">Docs website</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content container">
+    <section class="content__section content__section--list section">
+      <h1 class="content__headline">Piano guides list</h1>
+      <h2 class="content__small-headline" id="modal-widgets">Modal widgets</h2>
+      <nav class="content__menu">
+        <a class="content__item link" href="modals/dismissible.html">Dismissible</a>
+        <a class="content__item link" href="modals/non-dismissible.html">Non-dismissible</a>
+        <a class="content__item link" href="modal.html">Multistep</a>
+        <a class="content__item link" href="modal.html">Alternative shape</a>
+      </nav>
+      <h2 class="content__small-headline" id="ribbons">Inline widgets: Ribbons</h2>
+      <nav class="content__menu">
+        <a class="content__item link" href="modal.html">Basic</a>
+        <a class="content__item link" href="modal.html">Collapsible</a>
+        <a class="content__item link" href="modal.html">Top/bottom</a>
+        <a class="content__item link" href="modal.html">Disappearing/reappearing on scroll</a>
+        <a class="content__item link" href="modal.html">Changing color</a>
+      </nav>
+      <h2 class="content__small-headline" id="built-in">Inline widgets: Built-in</h2>
+      <nav class="content__menu">
+        <a class="content__item link" href="modal.html">Basic</a>
+        <a class="content__item link" href="modal.html">Content locking</a>
+        <a class="content__item link" href="modal.html">Multiple content locking</a>
+      </nav>
+      <h2 class="content__small-headline" id="landing-pages">Inline widgets: Landing pages</h2>
+      <nav class="content__menu">
+        <a class="content__item link" href="lp/partial-lp.html">Partial</a>
+        <a class="content__item link" href="lp/full-page-lp.html">Full page</a>
+      </nav>
+      <h2 class="content__small-headline" id="other">Inline widgets: Other</h2>
+      <nav class="content__menu">
+        <a class="content__item link" href="modal.html">Multistep inline</a>
+        <a class="content__item link" href="modal.html">Firing a modal</a>
+        <a class="content__item link" href="modal.html">Sticky square</a>
+        <a class="content__item link" href="modal.html">Whole-clickable</a>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="footer__logo" src="img/logo--white.svg" width="82" height="29" alt="Piano">
+    <p class="footer__copyright">
+      <small>&copy;</small>
+      <span id="footer-year">2020</span>
+      Piano Software Inc.
+    </p>
+  </footer>
+
+  <script>
+    document.querySelector("#footer-year").innerText = new Date().getFullYear();
+  </script>
+
+</body>
+
+</html>

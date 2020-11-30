@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piano widgets</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a class="nav__logo" href="https://piano.io" target="_blank" title="Piano website">
+        <span class="visually-hidden">Go to the Piano website</span>
+        <img src="img/logo.svg" width="59" height="21" alt="Piano">
+      </a>
+      <ul class="nav__list list">
+        <li class="nav__item">
+          <a class="nav__link nav__link--current" href="#">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="all-demos.html">Demos</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="all-guides.html">Guides</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="https://docs.piano.io" target="_blank">Docs website</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content container">
+    <section class="content__section section">
+      <h1 class="content__headline">Piano widgets</h1>
+      <b class="content__desk">
+        what you can do about them<br>
+        and how.
+      </b>
+      <p class="content__text">Welcome to Piano widgets! By widgets we mean here <a class="content__link link" href="https://docs.piano.io/offer-template-essentials/" target="_blank">offer templates</a>. What one needs to know in the first place is, there're 2 main types of templates: modal and inline. Modals are basically pop-ups overlapping the whole page and blocking its content. Inline templates are widgets which can be built in any block on your website&nbsp;&mdash; it can appear between article paragraphs, slide up from the very bottom, be a standalone landing page. On these pages you will find tons of examples of using our templates, both modal and inline, and guidelines on how to implemet every particular case. Please bear in mind these are only examples, and you can figure out your own custom variant! Don't hesitate to come up with ideas, address them to Piano guys you communicate with, we're always happy to help.</p>
+      <nav class="content__menu">
+        <a class="content__item link" href="#modal-widgets">Modal widgets</a>
+        <a class="content__item link" href="#inline-widgets">Inline widgets</a>
+        <a class="content__item link" href="#ribbons">Ribbons</a>
+        <a class="content__item link" href="#built-in">Built-in</a>
+        <a class="content__item link" href="#landing-pages">Landing pages</a>
+        <a class="content__item link" href="#other">Other</a>
+      </nav>
+      <h2 class="content__small-headline" id="modal-widgets">Modal widgets</h2>
+      <nav class="content__menu">
+        <a class="content__item link" href="modals/dismissible.html">Dismissible</a>
+        <a class="content__item link" href="modals/non-dismissible.html">Non-dismissible</a>
+        <a class="content__item link" href="modals/multistep.html">Multistep</a>
+        <a class="content__item link" href="modals/alternative-shape.html">Alternative shape</a>
+      </nav>
+      <p class="content__text">The modal format is a dominant format, commonly used for locking the content, subscription or registration offers. It can be a hard lock or it can be dismissible. It's a layer "above" the content. It is possible to trigger a checkout from a modal, or the CTA buttons may lead, for example, to a subscription landing page. Also it's a common use case to intercept ad blockers. The background "below" the modal can have variable color and opacity, <a class="content__link link" href="modals/dismissible.html#change-backdrop-color">here is how</a>.</p>
+      <h2 class="content__small-headline" id="inline-widgets">Inline widgets</h2>
+      <p class="content__text">If a modal is a pop-up which creates its context (backdrop and position) itself, an inline template requires a client to specify a container where it will "live". In terms of HTML, it could be a simple empty <code class="content__code">&lt;div&gt;</code>. This container position, width, and also optional surrounding styling options such as shadows or animations should be added by a client. All you need is CSS and probably JavaScript. There're tons of ways of using inline templates. Here we give you some examples and general instructions.</p>
+      <h2 class="content__small-headline" id="ribbons">Inline widgets: Ribbons</h2>
+      <nav class="content__menu">
+        <a class="content__item link" href="ribbons/basic-ribbon.html">Basic</a>
+        <a class="content__item link" href="modal.html">Collapsible</a>
+        <a class="content__item link" href="modal.html">Disappearing/reappearing on scroll</a>
+        <a class="content__item link" href="modal.html">Changing color</a>
+      </nav>
+      <p class="content__text">The sticky ribbons are communication templates often used for communicating a subscription product or short messages in a context of a use case, e.g. number of free articles remaining in a metered paywall or offering a special discount to a special targeted group of site visitors. The ribbons can be stuck to the bottom or to the top of a page, and their position is being customized on a client's end with the help of CSS.</p>
+      <h2 class="content__small-headline" id="built-in">Inline widgets: Built-in</h2>
+      <nav class="content__menu">
+        <a class="content__item link" href="modal.html">Basic</a>
+        <a class="content__item link" href="modal.html">Content locking</a>
+        <a class="content__item link" href="modal.html">Multiple content locking</a>
+      </nav>
+      <p class="content__text">Inline templates are used for the same purpose as modal formats, such as locking the content, subscription or registration offers. They are also used often for offering a newsletter or app download offer, based on targeting in Piano Composer. Unlike modal formats, inline formats are "in the page", based on the container positioning (defined on a client's end), they do not cover the whole page. Also they are not hiding ads, so revenue from viewed or clicked ads continues to flow. If inlines are used for content locking, a semitransparent layer on top of them with a fade-out effect, indicating, that the article is cropped and there is more text "behind", is recommended.</p>
+      <h2 class="content__small-headline" id="landing-pages">Inline widgets: Landing pages</h2>
+      <nav class="content__menu">
+        <a class="content__item link" href="lp/partial-lp.html">Partial</a>
+        <a class="content__item link" href="lp/full-page-lp.html">Full page</a>
+      </nav>
+      <p class="content__text">A subscription landing page is the central place for buying a subscription. They can be built completely within Piano templates or be a combination of a Piano template (only the central part with CTA buttons and pricing) and publishers own front end. These pages usually have higher conversion rates, than subscriptions on articles, because the motivation of coming to such landing page is different form "just" reading an article. To build a properly functioning subscription landing page is not easy, take your time, study public sources or purchase Optimization services for it. Use A/B tesing for improving them.</p>
+      <h2 class="content__small-headline" id="other">Inline widgets: Other</h2>
+      <nav class="content__menu">
+        <a class="content__item link" href="modal.html">Multistep inline</a>
+        <a class="content__item link" href="modal.html">Firing a modal</a>
+        <a class="content__item link" href="modal.html">Sticky square</a>
+        <a class="content__item link" href="modal.html">Whole-clickable</a>
+      </nav>
+      <p class="content__text">The other, less dominant formats, such as sticky square, firing a modal and similar, are technically inline templates being inserted into a container created on a client's end. Sometimes they look like modals (sticky square), because they overlap the page (though partially) and cannot be scrolled away, but still they are built as inlines. They are used for similar use cases as "built-in inlines", such as newsletter subscription offers, app downloads and targeted messaging to selected visitor segments. Experimenting with the design and UX of those formats might bring significant results improvements. Your creativity is the only limit (usually).</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="footer__logo" src="img/logo--white.svg" width="82" height="29" alt="Piano">
+    <p class="footer__copyright">
+      <small>&copy;</small>
+      <span id="footer-year">2020</span>
+      Piano Software Inc.
+    </p>
+  </footer>
+
+  <script>
+    document.querySelector("#footer-year").innerText = new Date().getFullYear();
+  </script>
+
+</body>
+
+</html>

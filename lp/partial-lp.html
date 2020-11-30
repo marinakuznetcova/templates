@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piano widgets: landing page</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body class="inner">
+  <header class="header">
+    <nav class="nav">
+      <a class="nav__logo" href="https://piano.io" target="_blank">
+        <span class="visually-hidden">Go to the Piano website</span>
+        <img src="../../img/logo.svg" width="59" height="21" alt="Piano">
+      </a>
+      <ul class="nav__list list">
+        <li class="nav__item">
+          <a class="nav__link" href="/">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="../all-demos.html">Demos</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="../all-guides.html">Guides</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="https://docs.piano.io" target="_blank">Docs website</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content container">
+    <section class="content__section section">
+      <h1 class="content__headline">Landing page: partial</h1>
+      <p class="content__text">By "partial" we mean here that you will have some elements on your end, and a container where our template will run. The idea is absolutely the same as for regular inline templates appearing, for example, inside an article, between its paragraphs. The only difference is that in this case a Piano template would pretend to be a part of a page, unlike an inline template in an article where it's clearly a separate block. At the same time it would have all terms information, sign in links, CTA buttons to start checkout easily, and for sure all clicks performed inside a Piano template (and other user data) might be tracked and gathered to a report.</p>
+      <p class="content__text">A very typical example of partial landing page is when a client wants this page to have a top menu or/and a footer same as on other pages of their website. So they prepare an empty page which contains only a top menu, a footer, and an empty <code class="content__code">&lt;div&gt;</code> where a Piano template will be inserted. This template would contain offers information along with pretty anything like benefits, FAQs, contacts, advanced options, tips, etc.</p>
+      <p class="content__text">What will be coded on what side (Piano vs client) is up to you to decide.</p>
+      <p class="content__action">
+        <a class="content__button button unbutton" href="partial-lp-demo.html">Demo</a>
+        <span class="content__footnote">To return from the demo page, please use the browser Back button. We were trying to make the demo as close to real life as possible, and did not provide any link to go back intentionally.</span>
+      </p>
+      <h2 class="content__small-headline">How-to</h2>
+      <nav class="content__menu">
+        <a class="content__item link" href="#set-up-a-template">Set up a template</a>
+        <a class="content__item link" href="#specify-sizes">Specify sizes</a>
+      </nav>
+      <h3 class="content__small-headline content__small-headline--secondary" id="set-up-a-template">Setting up a template</h3>
+      <p class="content__text">There're 2 ways to set up a landing page: <a class="content__link link" href="https://docs.piano.io/javascript-offer/" target="_blank">on your end</a> or <a class="content__link link" href="https://docs.piano.io/actions/#templatetab" target="_blank">in Composer</a>. More information on this you will find in our documentation, in the links just mentioned. Please pay attention to an inline type of templates.</p>
+      <h3 class="content__small-headline content__small-headline--secondary" id="specify-sizes">Specifying a template size</h3>
+      <p class="content__text">
+        Piano inline templates (which a partial landing page basically is) simply take 100% of a parent container width. By the parent container we mean that <code class="content__code">&lt;div&gt;</code> you specify on your end for Piano template to show up. Regarding its height, the browser counts it automatically according to the template contents. So nothing needs to be defined. Oppositely, please, let Piano template be parsed freely&nbsp;&mdash; things like setting up a fixed height would prevent it from displaying correctly.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="footer__logo" src="../../img/logo--white.svg" width="82" height="29" alt="Piano">
+    <p class="footer__copyright">
+      <small>&copy;</small>
+      <span id="footer-year">2020</span>
+      Piano Software Inc.
+    </p>
+  </footer>
+
+  <script>(function(src){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=src;var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})("https://sandbox.tinypass.com/xbuilder/experience/load?aid=mHtB14Aosu");</script>
+
+  <script>
+    document.querySelector("#footer-year").innerText = new Date().getFullYear();
+  </script>
+
+</body>
+
+</html>

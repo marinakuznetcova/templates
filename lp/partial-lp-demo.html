@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piano widgets: landing page</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body class="inner">
+  <main>
+    <header class="demo-header">
+      Client end header &mdash; menu and other stuff
+    </header>
+    <div class="lp-container"></div>
+    <footer class="demo-footer">
+      Client end footer &mdash; contacts, copyright, etc.
+    </footer>
+  </main>
+
+  <script>(function(src){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=src;var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})("https://sandbox.tinypass.com/xbuilder/experience/load?aid=mHtB14Aosu");</script>
+
+  <script>
+    tp = window["tp"] || [];
+
+    const templateParameters = {
+      displayMode: 'inline',
+      containerSelector: '.lp-container',
+      templateId: 'OTW3ENS82SGG',
+      showCloseButton: false
+    };
+
+    tp.push(["init", () => {
+      tp.template.show(templateParameters);
+    } ]);
+
+  </script>
+</body>
+
+</html>
