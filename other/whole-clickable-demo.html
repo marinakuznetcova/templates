@@ -4,15 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piano widgets: modals</title>
+  <title>Piano widgets: whole clickable</title>
   <link rel="stylesheet" href="../style.css">
   <style>
     .piano-container {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      box-shadow: 0 0 28px 0 rgba(51, 51, 51, 0.2);
+      max-width: 300px;
+      margin: 24px 0;
     }
   </style>
 </head>
@@ -42,14 +39,14 @@
 </header>
 <main class="content container">
   <section class="content__section section">
-    <h1 class="content__headline">Basic ribbon. Demo.</h1>
+    <h1 class="content__headline">Whole clickable template. Demo.</h1>
     <p class="content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at interdum eros. Nullam aliquet turpis dictum vulputate aliquet. Sed non pellentesque neque. Cras sodales eleifend ipsum, ac dapibus mi euismod id. Proin tincidunt pulvinar metus. Donec vestibulum magna et lectus accumsan aliquet. Nunc faucibus arcu at nulla vestibulum, sit amet cursus urna gravida. Nulla venenatis tellus non eros lobortis feugiat. Nam fringilla justo maximus nunc rutrum pharetra. Aenean posuere ex sit amet tincidunt varius. Suspendisse blandit mi quis gravida lobortis. Quisque vestibulum ex dui, at volutpat ante aliquam eget.</p>
     <p class="content__text">Nulla volutpat sed nisi in pretium. Nunc id fringilla justo. Ut non lobortis nunc, eget feugiat arcu. Donec pharetra porta urna, at laoreet libero vehicula non. Maecenas pretium vestibulum finibus. Proin id porttitor purus. Phasellus iaculis ex a est ultrices, eu efficitur mauris maximus. Quisque et urna in augue rhoncus molestie ac at lorem.</p>
+    <div class="piano-container"></div>
     <p class="content__text">Proin non gravida turpis, in pulvinar dolor. Sed hendrerit sodales tellus, non dignissim libero. Pellentesque egestas eleifend purus quis dignissim. Cras pharetra velit eget nibh efficitur mollis. Vivamus ornare, odio nec molestie semper, augue quam fringilla quam, ut pharetra justo mauris nec arcu. Curabitur convallis hendrerit tellus, at cursus tortor. Aliquam in mi vel mi luctus tempor. Vestibulum malesuada viverra erat, congue interdum tortor vulputate in. Fusce scelerisque leo eu arcu lobortis, eu hendrerit velit fermentum.</p>
     <p class="content__text">Morbi maximus augue quis neque tempor, a elementum est faucibus. In a sapien mauris. Donec et ex non urna molestie aliquam. Maecenas velit turpis, vestibulum non arcu non, ultricies accumsan lacus. Donec porttitor dui et lectus ultrices luctus. Pellentesque ultricies odio eu ex interdum tincidunt. Pellentesque facilisis mattis leo ac accumsan. Nam nunc orci, tincidunt interdum euismod quis, gravida in dui. Aliquam erat volutpat. Etiam pharetra urna at enim scelerisque porta. Ut nec placerat est. Vestibulum semper sapien in luctus auctor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
     <p class="content__text">Nulla commodo condimentum molestie. Pellentesque scelerisque massa quis ipsum imperdiet, vel tincidunt augue consequat. Maecenas venenatis pulvinar nisl non maximus. Curabitur bibendum turpis sed euismod laoreet. Aenean quis diam ut odio eleifend pellentesque. Integer aliquet rhoncus viverra. Maecenas convallis ante et pretium pulvinar. Etiam vitae tellus sit amet sem accumsan luctus porttitor id eros.</p>
   </section>
-  <div class="piano-container"></div>
 </main>
 
 <script>(function(src){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=src;var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})("https://sandbox.tinypass.com/xbuilder/experience/load?aid=mHtB14Aosu");</script>
@@ -60,13 +57,12 @@
     const templateParameters = {
         displayMode: 'inline',
         containerSelector: '.piano-container',
-        templateId: 'OTN5GDKTX223'
+        templateId: 'OTI5KB7PP9ZL'
     };
 
     tp.push(["init", () => {
         tp.template.show(templateParameters);
     } ]);
-
 </script>
 </body>
 

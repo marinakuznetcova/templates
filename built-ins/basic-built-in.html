@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piano widgets: landing page</title>
+  <title>Piano widgets: basic built-in</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -33,17 +33,10 @@
   </header>
   <main class="content container">
     <section class="content__section section">
-      <h1 class="content__headline">Landing page: full page</h1>
-      <p class="content__text">This is the most simple use case of a Piano inline template: the whole page is Piano template. It contains everything including top bar, side bar, and/or footer, and everything else needed.</p>
-      <p class="content__text">All you need to do is to prepare an empty <code class="content__code">&lt;div&gt;</code> for the Piano template on a completely empty page (empty HTML body). Also some CSS should be added to your page which would remove default gaps on the edges:</p>
-      <pre class="content__code">
-        html,
-        body {
-          margin: 0;
-          padding: 0;
-        }</pre>
+      <h1 class="content__headline">Built-in template: basic</h1>
+      <p class="content__text">Typically built-in inline templates are used to present offers (or any other information) to a user in a relatively unobtrusive way. They don't cover the content but simply cross a customer's way lurking among paragraphs, so that a user's eye clings to it when sliding through the text. At the same time it doesn't require a click for it doesn't need to be dismissed, just scrolled through. Usually such templates don't even have a dismiss button looking organic, like a native part of the content of your page.</p>
       <p class="content__action">
-        <a class="content__button button unbutton" href="full-page-lp-demo.html">Demo</a>
+        <a class="content__button button unbutton" href="basic-built-in-demo.html">Demo</a>
         <span class="content__footnote">To return from the demo page, please use the browser Back button. We were trying to make the demo as close to real life as possible, and did not provide any link to go back intentionally.</span>
       </p>
       <h2 class="content__small-headline">How-to</h2>
@@ -52,11 +45,12 @@
         <a class="content__item link" href="#specify-sizes">Specify sizes</a>
       </nav>
       <h3 class="content__small-headline content__small-headline--secondary" id="set-up-a-template">Setting up a template</h3>
-      <p class="content__text">There're 2 ways to set up a landing page: <a class="content__link link" href="https://docs.piano.io/javascript-offer/" target="_blank">on your end</a> or <a class="content__link link" href="https://docs.piano.io/actions/#templatetab" target="_blank">in Composer</a>. More information on this you will find in our documentation, in the links just mentioned. Please pay attention to an inline type of templates.</p>
-      <h3 class="content__small-headline content__small-headline--secondary" id="specify-sizes">Specifying a template size</h3>
       <p class="content__text">
-        Piano inline templates (which a full landing page is) simply take 100% of a parent container width. By the parent container we mean that <code class="content__code">&lt;div&gt;</code> you specify on your end for Piano template to show up. Regarding its height, the browser counts it automatically according to the template contents. So nothing needs to be defined. Oppositely, please, let Piano template be parsed freely&nbsp;&mdash; things like setting up a fixed height would prevent it from displaying correctly.
+        There're 2 ways to set up an inline template: <a class="content__link link" href="https://docs.piano.io/javascript-offer/" target="_blank">on your end</a> or <a class="content__link link" href="https://docs.piano.io/actions/#templatetab" target="_blank">in Composer</a>. More information on this you will find in our documentation, in the links just mentioned. Please pay attention to an inline type of templates.
       </p>
+      <p class="content__text">Once your container for an inline template is ready, just put it between paragraphs, or where you want your users to see a template.</p>
+      <h3 class="content__small-headline content__small-headline--secondary" id="specify-sizes">Specifying a template size</h3>
+      <p class="content__text">Piano inline templates simply take 100% of a parent container width. By the parent container we mean that <code class="content__code">&lt;div&gt;</code> you specify on your end for Piano template to show up. Regarding its height, the browser counts it automatically according to the template contents. So nothing needs to be defined. Oppositely, please, let Piano template be parsed freely&nbsp;&mdash; things like setting up a fixed height would prevent it from displaying correctly.</p>
     </section>
   </main>
 
@@ -72,7 +66,7 @@
   <script>(function(src){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=src;var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})("https://sandbox.tinypass.com/xbuilder/experience/load?aid=mHtB14Aosu");</script>
 
   <script>
-    document.querySelector("#footer-year").innerText = new Date().getFullYear();
+      document.querySelector("#footer-year").innerText = new Date().getFullYear();
   </script>
 
 </body>

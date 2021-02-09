@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piano widgets: basic ribbon</title>
+  <title>Piano widgets: collapsible ribbon</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -33,15 +33,16 @@
 </header>
 <main class="content container">
   <section class="content__section section">
-    <h1 class="content__headline">Ribbon: basic</h1>
+    <h1 class="content__headline">Ribbon: collapsible</h1>
     <p class="content__text">Ribbons are typical inline templates being inserted to a <code class="content__code">&lt;div&gt;</code> container on the client end. All styles, animation effects, and other magic should also be described on the client end. Usually it sticks to a page bottom (or top&nbsp;&mdash; depends on which option you prefer only) and looks like a narrow strip with a catchy copy and a CTA. To get a clearer idea of what it is please see the demo.</p>
     <p class="content__action">
-      <a class="content__button button unbutton" href="basic-ribbon-demo.html">Demo</a>
+      <a class="content__button button unbutton" href="collapsible-ribbon-demo.html">Demo</a>
       <span class="content__footnote">To return from the demo page, please use the browser Back button. We were trying to make the demo as close to real life as possible, and did not provide any link to go back intentionally.</span>
     </p>
     <h2 class="content__small-headline">How-to</h2>
     <nav class="content__menu">
       <a class="content__item link" href="#set-up-a-template">Set up a template</a>
+      <a class="content__item link" href="#make-it-collapsible">Make it collapsible</a>
       <a class="content__item link" href="#specify-sizes">Specify sizes</a>
     </nav>
     <h3 class="content__small-headline content__small-headline--secondary" id="set-up-a-template">Setting up a template</h3>
@@ -61,10 +62,22 @@
       }</pre>
     <p class="content__text">To position the ribbon at the top of you page, replace "bottom" with "top" in the sample above (line 4). Also, a shadow (<code class="content__code">.box-shadow</code> property, line 8) is optional. But it helps to distinguish the ribbon from the rest of the content. This role could be also played by a contrast background color or a border.</p>
     <p class="content__text">Don't forget to order your layers properly if needed by adjusting <code class="content__code">z-index</code> property.</p>
+    <h3 class="content__small-headline content__small-headline--secondary" id="make-it-collapsible">Making it collapsible</h3>
+    <p class="content__text">A client doesn't need to do anything on their end in order to make a template collapse/expand. It'd better be done in the template code on Piano end (in dashboard). The only thing to keep in mind as always is not to set fixed height to a container. Let the template recalculate its parameters itself.</p>
+    <p class="content__text">To add an ability to be collapsible you need 3 things.</p>
+    <ol class="content__list list">
+      <li class="content__list-item">Add a button-switcher which will toggle 2 views&nbsp;&mdash; collapsed and expanded.</li>
+      <li class="content__list-item">Attach an event listener to this button which will add and remove a CSS class (say, <code class="content__code">.widget--collapsed</code>) for a collapsed view on click.</li>
+      <li class="content__list-item">Make everything visible by default and describe the class <code class="content__code">.widget--collapsed</code> in your CSS which will be added to the widget on click (and removed on a next click) and switch the view. For example, to make a button hide in a collapsed view add something like this:</li>
+    </ol>
+    <pre class="content__code">
+          .widget--collapsed .widget__button {
+            display: none;
+          }</pre>
+    <p class="content__text">You may hide pretty anything in a same way using CSS selectors. Also you can change the switcher-button state according to a current view (if it's an angle arrow, it's a good way to flip it). Class names can be replaced with yours.</p>
     <h3 class="content__small-headline content__small-headline--secondary" id="specify-sizes">Specifying a template size</h3>
-    <p class="content__text">
-      Piano inline templates simply take 100% of a parent container width. By the parent container we mean that <code class="content__code">&lt;div&gt;</code> you specify on your end for Piano template to show up. Regarding its height, the browser counts it automatically according to the template contents. So nothing needs to be defined. Oppositely, please, let Piano template be parsed freely&nbsp;&mdash; things like setting up a fixed height would prevent it from displaying correctly.
-    </p>
+    <p class="content__text">Piano inline templates simply take 100% of a parent container width. By the parent container we mean that <code class="content__code">&lt;div&gt;</code> you specify on your end for Piano template to show up. Regarding its height, the browser counts it automatically according to the template contents. So nothing needs to be defined. Oppositely, please, let Piano template be parsed freely&nbsp;&mdash; things like setting up a fixed height would prevent it from displaying correctly.</p>
+    <p class="content__text">If you need an expandable template rather than collapsible (which would be collapsed by default), all you need is to slightly change the logic and add a <code class="content__code">.widget--open</code> instead of <code class="content__code">.widget--collapsed</code>, or simply add the <code class="content__code">.widget--collapsed</code> class to the widget by default.</p>
   </section>
 </main>
 

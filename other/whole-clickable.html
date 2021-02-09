@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piano widgets: basic ribbon</title>
+  <title>Piano widgets: whole clickable</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -33,38 +33,27 @@
 </header>
 <main class="content container">
   <section class="content__section section">
-    <h1 class="content__headline">Ribbon: basic</h1>
-    <p class="content__text">Ribbons are typical inline templates being inserted to a <code class="content__code">&lt;div&gt;</code> container on the client end. All styles, animation effects, and other magic should also be described on the client end. Usually it sticks to a page bottom (or top&nbsp;&mdash; depends on which option you prefer only) and looks like a narrow strip with a catchy copy and a CTA. To get a clearer idea of what it is please see the demo.</p>
+    <h1 class="content__headline">Inline template: whole clickable</h1>
+    <p class="content__text">There are cases when you need a whole template to be clickable. This can be a banner or only a single button on your page but which needs to be a Piano template with all its functionality: tracking clicks, starting checkout, using variants with different colors and copy, or A/B testing.</p>
     <p class="content__action">
-      <a class="content__button button unbutton" href="basic-ribbon-demo.html">Demo</a>
+      <a class="content__button button unbutton" href="whole-clickable-demo.html">Demo</a>
       <span class="content__footnote">To return from the demo page, please use the browser Back button. We were trying to make the demo as close to real life as possible, and did not provide any link to go back intentionally.</span>
     </p>
     <h2 class="content__small-headline">How-to</h2>
     <nav class="content__menu">
       <a class="content__item link" href="#set-up-a-template">Set up a template</a>
+      <a class="content__item link" href="#make-it-whole-clickable">Make it whole clickable</a>
       <a class="content__item link" href="#specify-sizes">Specify sizes</a>
     </nav>
     <h3 class="content__small-headline content__small-headline--secondary" id="set-up-a-template">Setting up a template</h3>
     <p class="content__text">
       There're 2 ways to set up an inline template: <a class="content__link link" href="https://docs.piano.io/javascript-offer/" target="_blank">on your end</a> or <a class="content__link link" href="https://docs.piano.io/actions/#templatetab" target="_blank">in Composer</a>. More information on this you will find in our documentation, in the links just mentioned. Please pay attention to an inline type of templates.
     </p>
-    <p class="content__text">Speaking about a ribbon specifically. Since you want the container to be "glued" to a top/bottom of your page, you need to add these styles to its class (example class here is called <code class="content__code">.piano-container</code>) in your CSS:</p>
-    <pre class="content__code">
-      .piano-container {
-        position: fixed;
-      /* for bottom position */
-        bottom: 0;
-        left: 0;
-        width: 100%;
-      /* shadow is an optional property */
-        box-shadow: 0 0 28px 0 rgba(51, 51, 51, 0.1);
-      }</pre>
-    <p class="content__text">To position the ribbon at the top of you page, replace "bottom" with "top" in the sample above (line 4). Also, a shadow (<code class="content__code">.box-shadow</code> property, line 8) is optional. But it helps to distinguish the ribbon from the rest of the content. This role could be also played by a contrast background color or a border.</p>
-    <p class="content__text">Don't forget to order your layers properly if needed by adjusting <code class="content__code">z-index</code> property.</p>
+    <h3 class="content__small-headline content__small-headline--secondary" id="make-it-whole-clickable">Making a template whole clickable</h3>
+    <p class="content__text">Technically it's a regular inline template, but usually a really small one. Wrap all its contents into an interactive element tag, like <code class="content__code">&lt;a&gt;</code> or <code class="content__code">&lt;button&gt;</code> and provide it with an action you want it to perform.</p>
+    <p class="content__text">Keep in mind UX best practices such as specifying states&nbsp;&mdash; hover, focus, active&nbsp;&mdash; to let a user know that your banner (or button) is interactive.</p>
     <h3 class="content__small-headline content__small-headline--secondary" id="specify-sizes">Specifying a template size</h3>
-    <p class="content__text">
-      Piano inline templates simply take 100% of a parent container width. By the parent container we mean that <code class="content__code">&lt;div&gt;</code> you specify on your end for Piano template to show up. Regarding its height, the browser counts it automatically according to the template contents. So nothing needs to be defined. Oppositely, please, let Piano template be parsed freely&nbsp;&mdash; things like setting up a fixed height would prevent it from displaying correctly.
-    </p>
+    <p class="content__text">Piano inline templates simply take 100% of a parent container width. By the parent container we mean that <code class="content__code">&lt;div&gt;</code> you specify on your end for Piano template to show up. Regarding its height, the browser counts it automatically according to the template contents. So nothing needs to be defined. Oppositely, please, let Piano template be parsed freely&nbsp;&mdash; things like setting up a fixed height would prevent it from displaying correctly.</p>
   </section>
 </main>
 
